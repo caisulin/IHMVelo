@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Accueil</title>
+</head>
+<body>
+	<h2>Chercher un vélo</h2>
+	
+	<form method="post" action="ResultatRechercheVelo">
+
+			Localisation : <select name="ville">
+				<option>---
+				<option>Angers
+				<option>Bordeaux
+				<option>Nantes
+			</select> <br> 
+			Début  Date : <input type="date" name="dateDebut"> 
+			Heure : <input type="time" name="heureDebut"> <br>
+			Fin  Date : <input type="date" name="dateFin">
+			Heure : <input type="time" name="heureFin"> <br> 
+			Type de vélo : <select name="velo">
+				<option>Fixie
+				<option>VTT
+				<option>Velo homme
+				<option>Velo femme
+				<option>Velo enfant
+			</select> <br> 
+			Accesoire : <select name="accesoire">
+				<option>---
+				<option>Petites roulettes
+				<option>Remorque pour enfant
+				<option>Porte bagages
+				<option>Siege enfant
+			</select>
+			<br>
+
+		<input type="submit" value="Rechercher">
+
+	</form>
+</body>
+</html>
