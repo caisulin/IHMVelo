@@ -86,26 +86,8 @@
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li><a class="active" href="index.html">Home</a></li>
 							<li>
-								<a href="hotel.html" class="fh5co-sub-ddown">Nos v√©los</a>
-								<ul class="fh5co-sub-menu">
-								 	<li><a href="#">Pour les grands</a></li>
-								 	<li><a href="#">Et les petits</a></li>
-									<li>
-										<a href="#" class="fh5co-sub-ddown">King Hotel</a>
-										<ul class="fh5co-sub-menu">
-											<li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" target="_blank">Build</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=work-free-html5-template-bootstrap" target="_blank">Work</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=light-free-html5-template-bootstrap" target="_blank">Light</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=relic-free-html5-template-using-bootstrap" target="_blank">Relic</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=display-free-html5-template-using-bootstrap" target="_blank">Display</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=sprint-free-html5-template-bootstrap" target="_blank">Sprint</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Five Star Hotel</a></li> 
-								</ul>
+								<a href="listeVelo.html" class="fh5co-sub-ddown">Nos vÈlos</a>
 							</li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="blog.html">Blog</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
@@ -125,7 +107,7 @@
 		   				<div class="slider-text-inner js-fullheight">
 		   					<div class="desc">
 		   						<p><span>Avec PARADISEBIKE </span></p>
-		   						<h2>Passez un moment de d√©tente en famille</h2>
+		   						<h2>Passez un moment de dÈtente en famille</h2>
 		   					</div>
 		   				</div>
 		   			</div>
@@ -151,7 +133,7 @@
 		   				<div class="slider-text-inner js-fullheight">
 		   					<div class="desc">
 		   						<p><span>Avec PARADISEBIKE</span></p>
-		   						<h2>Retrouvez des v√©los de qualit√©</h2>
+		   						<h2>Retrouvez des vÈlos de qualitÈ</h2>
 		   					</div>
 		   				</div>
 		   			</div>
@@ -165,24 +147,26 @@
 		<div class="container">
 			<div class="row">
 				<div id="availability">
-					<form action="#">
+					<form method="service" action="ResultatRechercheVelo">
 						<div class="a-col">
 							<section>
 								<select class="cs-select cs-skin-border">
-									<option value="" disabled selected>Selectionner un v√©lo</option>
-									<option value="email">Luxe Hotel</option>
-									<option value="twitter">Deluxe Hotel</option>
-									<option value="linkedin">Five Star Hotel</option>
+									<option value="" disabled selected>VÈlo</option>
+									<option value="VTT">VTT</option>
+									<option value="VÈlo femme">VÈlo femme</option>
+									<option value="VÈlo homme">VÈlo homme</option>
+									<option value="VÈlo enfant">VÈlo enfant</option>
+									<option value="Fixie">Fixie</option>
 								</select>
 							</section>
 						</div>
 						<div class="a-col">
 							<section>
 								<select class="cs-select cs-skin-border">
-									<option value="" disabled selected>Select Hotel</option>
-									<option value="email">Luxe Hotel</option>
-									<option value="twitter">Deluxe Hotel</option>
-									<option value="linkedin">Five Star Hotel</option>
+									<option value="" disabled selected>Villes</option>
+									<option value="Nantes">Nantes</option>
+									<option value="Angers">Angers</option>
+									<option value="Bordeaux">Bordeaux</option>
 								</select>
 							</section>
 						</div>
@@ -199,7 +183,7 @@
 							</div>
 						</div>
 						<div class="a-col action">
-							<a href="#">
+							<a href="/ResultatRechercheVelo">
 								<span>Check</span>
 								Availability
 							</a>

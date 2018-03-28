@@ -69,8 +69,8 @@ public class RechercherVeloServlet extends HttpServlet {
 		"</body>"+
 		"</html>" );
 
-//		RequestDispatcher dispacher = request.getRequestDispatcher("ListeVelo.jsp");
-//ldispacher.forward(request, response);
+		RequestDispatcher dispacher = request.getRequestDispatcher("ListeVelo.jsp");
+		dispacher.forward(request, response);
 
 	}
 
