@@ -147,10 +147,10 @@
 		<div class="container">
 			<div class="row">
 				<div id="availability">
-					<form method="service" action="ResultatRechercheVelo">
+					<form method="post" action="RechercherVelo">
 						<div class="a-col">
 							<section>
-								<select class="cs-select cs-skin-border">
+								<select class="cs-select cs-skin-border" name="categorie">
 									<option value="" disabled selected>Vélo</option>
 									<option value="VTT">VTT</option>
 									<option value="Vélo femme">Vélo femme</option>
@@ -162,7 +162,7 @@
 						</div>
 						<div class="a-col">
 							<section>
-								<select class="cs-select cs-skin-border">
+								<select class="cs-select cs-skin-border" name="ville">
 									<option value="" disabled selected>Villes</option>
 									<option value="Nantes">Nantes</option>
 									<option value="Angers">Angers</option>
@@ -183,11 +183,12 @@
 							</div>
 						</div>
 						<div class="a-col action">
-							<a href="/ResultatRechercheVelo">
+							<a href="RechercherVelo">
 								<span>Check</span>
 								Availability
 							</a>
 						</div>
+						<input type="submit" value="envoyer">
 					</form>
 				</div>
 			</div>

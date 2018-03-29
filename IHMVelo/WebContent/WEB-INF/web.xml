@@ -9,4 +9,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>RechercheVelo</display-name>
+    <servlet-name>RechercheVelo</servlet-name>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RechercheVelo</servlet-name>
+    <url-pattern>/RechercheVelo</url-pattern>
+  </servlet-mapping>
 </web-app>

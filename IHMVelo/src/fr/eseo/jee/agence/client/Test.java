@@ -1,19 +1,44 @@
 package fr.eseo.jee.agence.client;
 
-import fr.eseo.jee.agence.client.ClientBD;
+
+import fr.eseo.jee.agence.velo.sw2.ReservationVelo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import fr.eseo.jee.agence.velo.sw2.LocationSEI;
+import fr.eseo.jee.agence.velo.sw2.LocationService;
+import fr.eseo.jee.agence.velo.sw2.Velo;
 
 public class Test {
 
 	public static void main(String[] args) {
-		Client client = new Client();
-		client.setNom("nom");
-		client.setPrenom("prenom");
-		client.setAdresse("add");
-		client.setEmail("client@email.fr");
-		client.setTelephone("000");
-		System.out.println(client.toString());
-		ClientBD clientBD = new ClientBD();
-		System.out.println(clientBD.ajoutClient(client));
+		
+		String categorie = "vtt";
+		String ville = "Nantes";
+		Velo velo = new Velo();
+		velo.setCategorie(categorie);
+		velo.setVille(ville);
+		velo.setCodeVelo(1);
+		velo.setPrixLocation(10);
+		List<Velo> lesVelos = new ArrayList<Velo>();
+		
+		// utiliser le sw pour convertir
+		LocationService service = new LocationService();
+		LocationSEI port = service.getLocationPort();
+		
+		
+		List<Velo> velos = port.trouverVelo(velo);
+		for (int i=0; i<velos.size(); i++) {
+			System.out.println(velos.get(i).toString());
+		}
+		System.out.println(velos);
+		
+		
+		
+//		farenheit = port.celsiusToFarenheit(celsius);
+		lesVelos = port.trouverVelo(velo);
+		System.out.println(lesVelos.get(0).toString());
 	}
 
 }

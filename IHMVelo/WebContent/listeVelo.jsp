@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -86,7 +89,7 @@
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li><a href="index.html">Home</a></li>
 							<li>
-								<a class="active" href="listeVelo.html" class="fh5co-sub-ddown">Nos vélos</a>
+								<a class="active" href="listeVelo.html" class="fh5co-sub-ddown">Nos vÃ©los</a>
 							</li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
@@ -103,8 +106,7 @@
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
 					<div class="fh5co-intro fh5co-table-cell">
-						<h1 class="text-center">Choose Our Hotel</h1>
-						<p>Made with love by the fine folks at <a href="http://freehtml5.co">FreeHTML5.co</a></p>
+						<h1 class="text-center">Choose Your Bike</h1>
 					</div>
 				</div>
 			</div>
@@ -122,6 +124,8 @@
 						</div>
 						<div class="desc">
 							<h3><a href="#">Hotel Name</a></h3>
+							<%= session.getAttribute("ville") %>
+							<%= session.getAttribute("categorie") %>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 						</div>
 					</div>

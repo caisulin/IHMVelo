@@ -1,5 +1,5 @@
 
-package fr.eseo.jee.agence.velo.sw;
+package fr.eseo.jee.agence.velo.sw2;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
