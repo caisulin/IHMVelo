@@ -147,7 +147,7 @@
 		<div class="container">
 			<div class="row">
 				<div id="availability">
-					<form method="post" action="RechercherVelo">
+					<form id="form" method="post" action="RechercherVelo">
 						<div class="a-col">
 							<section>
 								<select class="cs-select cs-skin-border" name="categorie">
@@ -183,12 +183,11 @@
 							</div>
 						</div>
 						<div class="a-col action">
-							<a href="RechercherVelo">
+							<a onclick='document.getElementById("form").submit()'>
 								<span>Check</span>
 								Availability
 							</a>
 						</div>
-						<input type="submit" value="envoyer">
 					</form>
 				</div>
 			</div>

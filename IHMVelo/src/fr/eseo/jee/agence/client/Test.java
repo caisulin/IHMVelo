@@ -1,7 +1,6 @@
 package fr.eseo.jee.agence.client;
 
 
-import fr.eseo.jee.agence.velo.sw2.ReservationVelo;
 
 import java.util.ArrayList;
 import java.util.List;

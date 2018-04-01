@@ -49,19 +49,17 @@ public class RechercherVelo extends HttpServlet {
 		LocationService service = new LocationService();
 		LocationSEI port = service.getLocationPort();
 		
-//		farenheit = port.celsiusToFarenheit(celsius);
 		lesVelos = port.trouverVelo(velo);
 		
 
 		HttpSession session = request.getSession();
+		session.setAttribute("lesVelos", lesVelos);
+		request.setAttribute("lesVelos", lesVelos);
 		session.setAttribute("ville", ville);
 		session.setAttribute("categorie", categorie);
-		System.out.println();
-		System.out.println(lesVelos.toString());
-		//session.setAttribute("lesVelos", lesVelos.toString());
 
-//		session.setAttribute("resultat", farenheit);
-//		
+		
+
 		RequestDispatcher dispat = request.getRequestDispatcher("listeVelo.jsp");
 		dispat.forward(request, response);		}
 

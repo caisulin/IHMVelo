@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -116,81 +118,29 @@
 	<div id="fh5co-hotel-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
-					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(images/image-1.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-						</div>
-						<div class="desc">
-							<h3><a href="#">Hotel Name</a></h3>
-							<%= session.getAttribute("ville") %>
-							<%= session.getAttribute("categorie") %>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(images/image-2.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-						</div>
-						<div class="desc">
-							<h3><a href="#">Hotel Name</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+			
+				
+				<%@ page import="fr.eseo.jee.agence.velo.sw2.Velo,fr.eseo.jee.agence.velo.sw2.LocationSEI,
+				fr.eseo.jee.agence.velo.sw2.LocationService,java.util.List" %>
+				<form  id="form" method="post" action="DemandeReservationVelo">
+				</form>
+				<% List<Velo> lesVelos = (List<Velo>) session.getAttribute("lesVelos");
+				
+				for (Velo vel: lesVelos){ %>
+					<div class="col-md-4">
+						<div class="hotel-content">
+							<div class="hotel-grid" style="background-image: url(images/image-1.jpg);">
+								<div class="price"><small>Prix</small><span>€<%=vel.getPrixLocation() %></span></div>
+								<a class="book-now text-center" onclick='document.getElementById("form").submit()'>
+								<i class="ti-calendar"></i> Réserver</a>
+							</div>
+							<div class="desc">
+								<h3><a href="#">ID= <%=vel.getCodeVelo() %>  <%=vel.getCategorie() %></a></h3>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(images/image-3.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-						</div>
-						<div class="desc">
-							<h3><a href="#">Hotel Name</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(images/image-4.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-						</div>
-						<div class="desc">
-							<h3><a href="#">Hotel Name</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(images/image-5.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-						</div>
-						<div class="desc">
-							<h3><a href="#">Hotel Name</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="hotel-content">
-						<div class="hotel-grid" style="background-image: url(images/image-6.jpg);">
-							<div class="price"><small>For as low as</small><span>$100/night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-						</div>
-						<div class="desc">
-							<h3><a href="#">Hotel Name</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
-				</div>
-
+				<% }%>
+				
 			</div>
 		</div>
 	</div>
