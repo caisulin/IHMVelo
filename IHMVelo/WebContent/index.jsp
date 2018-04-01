@@ -88,7 +88,7 @@
 							<li>
 								<a href="listeVelo.html" class="fh5co-sub-ddown">Nos vélos</a>
 							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="paiement.jsp">Paiement</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -173,13 +173,13 @@
 						<div class="a-col alternate">
 							<div class="input-field">
 								<label for="date-start">Check In</label>
-								<input type="text" class="form-control" id="date-start" />
+								<input type="text" class="form-control" id="date-start" name="dateDebut"/>
 							</div>
 						</div>
 						<div class="a-col alternate">
 							<div class="input-field">
 								<label for="date-end">Check Out</label>
-								<input type="text" class="form-control" id="date-end" />
+								<input type="text" class="form-control" id="date-end" name="dateFin"/>
 							</div>
 						</div>
 						<div class="a-col action">

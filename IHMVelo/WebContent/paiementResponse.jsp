@@ -66,11 +66,16 @@
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
 	
+	<link rel="stylesheet" href="css/paiement.css">
+	
+	
 	<!-- Style -->
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/paiement.js"></script>
+	
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -88,11 +93,11 @@
 					<h1 id="fh5co-logo"><a href="index.jsp">PARADISEBIKE</a></h1>
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="index.jsp">Home</a></li>
 							<li>
 								<a class="active" href="listeVelo.html" class="fh5co-sub-ddown">Nos vélos</a>
 							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="paiement.jsp">Paiement</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -107,7 +112,7 @@
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
 					<div class="fh5co-intro fh5co-table-cell">
-						<h1 class="text-center">Choose Your Bike</h1>
+						<h1 class="text-center">It's time to pay !</h1>
 					</div>
 				</div>
 			</div>
@@ -117,52 +122,27 @@
 	<div id="fh5co-hotel-section">
 		<div class="container">
 			<div class="row">
+				<div class="container">
+    <div class="row">
+        <% if (request.getAttribute("result").equals("OK")) { %>
+		<div class="container">
+			<div class="alert alert-success" role="alert">
+			Le paiement a bien été effectué.
+			</div>
+			<br>
+			<a href="index.jsp">Retour à l'accueil</a>
 			
-				
-				<%@ page import="fr.eseo.jee.agence.velo.sw2.Velo,fr.eseo.jee.agence.velo.sw2.LocationSEI,
-				fr.eseo.jee.agence.velo.sw2.LocationService,java.util.List,java.util.Random" %>
-				<form  id="form" method="post" action="DemandeReservationVelo">
-				</form>
-				<% List<Velo> lesVelos = (List<Velo>) session.getAttribute("lesVelos");
-				
-				if (lesVelos.isEmpty()){ %>
-					<div class="alert alert-warning" role="alert">
-					Aucun vélo ne correspond à vos critères : 
-					<a href="index.jsp">Retour à l'accueil</a>
-					</div>
-					
-				<%}
-				
-				for (Velo vel: lesVelos){ 
-					Random r = new Random();
-					int valeur = 1 + r.nextInt(2);
-					String categorie = vel.getCategorie();
-					if (categorie.equals("vélo femme")) {
-						categorie = "Femme";
-					}
-					if (categorie.equals("vélo homme")) {
-						categorie = "Homme";
-					}
-					if (categorie.equals("vélo enfant")) {
-						categorie = "Enfant";
-					}
-				%>
-					<div class="col-md-4">
-						<div class="hotel-content">
-						debut <%=session.getAttribute("dateDebut")%>
-						fin <%=session.getAttribute("dateFin")%>
-						
-							<div class="hotel-grid" style="background-image: url(images/velos/<%=categorie%><%= valeur%>.jpg);">
-								<div class="price"><small>Prix</small><span>€<%=vel.getPrixLocation() %></span></div>
-								<a class="book-now text-center" onclick='document.getElementById("form").submit()'>
-								<i class="ti-calendar"></i> Réserver</a>
-							</div>
-							<div class="desc">
-								<h3><a href="#">ID= <%=vel.getCodeVelo() %>  <%=vel.getCategorie() %></a></h3>
-							</div>
-						</div>
-					</div>
-				<% }%>
+		</div>
+		<% } else { %>
+		<div class="container">
+			<div class="alert alert-danger" role="alert">
+			Erreur: veuillez vérifier votre numéro de réservation.
+			<a href="paiement.jsp">Retour à la page précédente</a>
+			</div>
+		</div>
+		<% } %>          
+    </div>
+</div>
 				
 			</div>
 		</div>

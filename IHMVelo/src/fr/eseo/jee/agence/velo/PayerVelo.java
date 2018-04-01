@@ -22,16 +22,15 @@ import fr.eseo.jee.agence.velo.sw2.Velo;
 /**
  * Servlet implementation class RechercherVelo
  */
-@WebServlet("/RechercherVelo")
-public class RechercherVelo extends HttpServlet {
+@WebServlet("/PayerVelo")
+public class PayerVelo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RechercherVelo() {
+    public PayerVelo() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 
@@ -39,30 +38,19 @@ public class RechercherVelo extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String categorie = request.getParameter("categorie");
-		String ville = request.getParameter("ville");
-		List<Velo> lesVelos = new ArrayList<Velo>();
-		Velo velo = new Velo();
-		velo.setCategorie(categorie);
-		velo.setVille(ville);
-		String dateDebut = request.getParameter("dateDebut");
-		dateDebut = dateDebut.substring(6) + '-'+ dateDebut.substring(0,2)+'-'+ dateDebut.substring(3,5);
-		String dateFin = request.getParameter("dateFin");
-		dateFin = dateFin.substring(6) + '-'+ dateFin.substring(0,2)+'-'+ dateFin.substring(3,5);
+		int codeReservation = Integer.parseInt(request.getParameter("codeReservation"));
+		String result = "";
 		
 		// utiliser le sw pour convertir
 		LocationService service = new LocationService();
 		LocationSEI port = service.getLocationPort();
 		
-		lesVelos = port.trouverVelo(velo);
+		result = port.payerVelo(codeReservation);
 		
 		HttpSession session = request.getSession();
-		session.setAttribute("lesVelos", lesVelos);
-		request.setAttribute("lesVelos", lesVelos);
-		session.setAttribute("dateDebut", dateDebut);		
-		session.setAttribute("dateFin", dateFin);
+		request.setAttribute("result", result);
 
-		RequestDispatcher dispat = request.getRequestDispatcher("listeVelo.jsp");
+		RequestDispatcher dispat = request.getRequestDispatcher("paiementResponse.jsp");
 		dispat.forward(request, response);		}
 
 }
