@@ -90,14 +90,12 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.jsp">PARADISEBIKE</a></h1>
+					<h1 id="fh5co-logo"><a href="index.html">PARADISEBIKE</a></h1>
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li><a href="index.jsp">Home</a></li>
-							<li>
-								<a class="active" href="listeVelo.html" class="fh5co-sub-ddown">Nos vélos</a>
-							</li>
-							<li><a href="paiement.jsp">Paiement</a></li>
+							<li><a href="index.html">Home</a></li>
+							<li><a class="active" href="paiement.jsp">Paiement</a></li>
+							<li><a href="annulation.jsp">Annulation</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -130,7 +128,7 @@
 			Le paiement a bien été effectué.
 			</div>
 			<br>
-			<a href="index.jsp">Retour à l'accueil</a>
+			<a href="index.html">Retour à l'accueil</a>
 			
 		</div>
 		<% } else { %>

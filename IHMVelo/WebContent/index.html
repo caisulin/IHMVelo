@@ -105,7 +105,7 @@
 		   				<div class="slider-text-inner js-fullheight">
 		   					<div class="desc">
 		   						<p><span>Avec PARADISEBIKE </span></p>
-		   						<h2>Passez un moment de détente en famille</h2>
+		   						<h2>Passez un moment de dÃ©tente en famille</h2>
 		   					</div>
 		   				</div>
 		   			</div>
@@ -131,7 +131,7 @@
 		   				<div class="slider-text-inner js-fullheight">
 		   					<div class="desc">
 		   						<p><span>Avec PARADISEBIKE</span></p>
-		   						<h2>Retrouvez des vélos de qualité</h2>
+		   						<h2>Retrouvez des vÃ©los de qualitÃ©</h2>
 		   					</div>
 		   				</div>
 		   			</div>
@@ -145,23 +145,15 @@
 		<div class="container">
 			<div class="row">
 				<div id="availability">
-				
-				<% boolean dateVide = (boolean)request.getAttribute("dateVide");
-				if (dateVide == true) {%>
-					<div class="alert alert-danger" role="alert">
-					Veuillez saisir les dates !
-					</div>
-										
-				<%} %>
 					<form id="form" method="post" action="RechercherVelo">
 						<div class="a-col">
 							<section>
 								<select class="cs-select cs-skin-border" name="categorie">
-									<option value="" disabled selected>Vélo</option>
+									<option value="" disabled selected>VÃ©lo</option>
 									<option value="VTT">VTT</option>
-									<option value="Vélo femme">Vélo femme</option>
-									<option value="Vélo homme">Vélo homme</option>
-									<option value="Vélo enfant">Vélo enfant</option>
+									<option value="VÃ©lo femme">VÃ©lo femme</option>
+									<option value="VÃ©lo homme">VÃ©lo homme</option>
+									<option value="VÃ©lo enfant">VÃ©lo enfant</option>
 									<option value="Fixie">Fixie</option>
 								</select>
 							</section>

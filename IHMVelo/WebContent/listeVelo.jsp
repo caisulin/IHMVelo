@@ -85,14 +85,12 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.jsp">PARADISEBIKE</a></h1>
+					<h1 id="fh5co-logo"><a href="index.html">PARADISEBIKE</a></h1>
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li><a href="index.html">Home</a></li>
-							<li>
-								<a class="active" href="listeVelo.html" class="fh5co-sub-ddown">Nos vélos</a>
-							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="paiement.jsp">Paiement</a></li>
+							<li><a href="annulation.jsp">Annulation</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -128,7 +126,7 @@
 				if (lesVelos.isEmpty()){ %>
 					<div class="alert alert-warning" role="alert">
 					Aucun vélo ne correspond à vos critères : 
-					<a href="index.jsp">Retour à l'accueil</a>
+					<a href="index.html">Retour à l'accueil</a>
 					</div>
 					
 				<%}
@@ -149,8 +147,6 @@
 				%>
 					<div class="col-md-4">
 						<div class="hotel-content">
-						debut <%=session.getAttribute("dateDebut")%>
-						fin <%=session.getAttribute("dateFin")%>
 						
 							<div class="hotel-grid" style="background-image: url(images/velos/<%=categorie%><%= valeur%>.jpg);">
 								<div class="price"><small>Prix</small><span>€<%=vel.getPrixLocation() %></span></div>

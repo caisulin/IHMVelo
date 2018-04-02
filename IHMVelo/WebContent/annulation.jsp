@@ -94,8 +94,8 @@
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li><a href="index.html">Home</a></li>
-							<li><a class="active" href="paiement.jsp">Paiement</a></li>
-							<li><a href="annulation.jsp">Annulation</a></li>
+							<li><a href="paiement.jsp">Paiement</a></li>
+							<li><a class="active" href="annulation.jsp">Annulation</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -110,106 +110,40 @@
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
 					<div class="fh5co-intro fh5co-table-cell">
-						<h1 class="text-center">It's time to pay !</h1>
+						<h1 class="text-center">Annuler une réservation </h1>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="fh5co-hotel-section">
+	<div class="wrap">
 		<div class="container">
 			<div class="row">
-				<div class="container">
-    <div class="row">
-        <!-- You can make it whatever width you want. I'm making it full width
-             on <= small devices and 4/12 page width on >= medium devices -->
-        <div class="col-lg-8 col-lg-offset-2">
-        
-                 <div class="panel panel-default credit-card-box">
-                <div class="panel-heading" >
-                    <div class="row display-tr" >
-                        <h3 class="panel-title display-td" >MODE DE PAIEMENT</h3>
-                        <div class="display-td" >                            
-                            <img class="img-responsive img-responsive col-lg-offset-4" src="images/logo_carte.png">
-                        </div>
-                    </div>                    
-                </div>
-                <div class="panel-body">
-                    <form role="form" id="payment-form" method="POST" action="PayerVelo">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label for="cardNumber">CARD NUMBER</label>
-                                    <div class="input-group">
-                                        <input 
-                                            type="tel"
-                                            class="form-control"
-                                            name="cardNumber"
-                                            placeholder="Valid Card Number"
-                                            autocomplete="cc-number"
-                                            required autofocus 
-                                            maxlength="16"
-                                        />
-                                        <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
-                                    </div>
-                                </div>                            
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-7 col-md-7">
-                                <div class="form-group">
-                                    <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
-                                    <input 
-                                        type="tel" 
-                                        class="form-control" 
-                                        name="cardExpiry"
-                                        placeholder="MM / YY"
-                                        autocomplete="cc-exp"
-                                        required 
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-xs-5 col-md-5 pull-right">
-                                <div class="form-group">
-                                    <label for="cardCVC">CV CODE</label>
-                                    <input 
-                                        type="tel" 
-                                        class="form-control"
-                                        name="cardCVC"
-                                        placeholder="CVC"
-                                        autocomplete="cc-csc"
-                                        required
-                                        maxlength="3"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label for="codeReservation">NUMERO DE RESERVATION</label>
-                                    <input type="text" class="form-control" name="codeReservation" required/>
-                                </div>
-                            </div>                        
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <button class="subscribe btn btn-success btn-lg btn-block" type="button" onclick='document.getElementById("payment-form").submit()'>VALIDER LE PAIEMENT</button>
-                            </div>
-                        </div>
-                        <div class="row" style="display:none;">
-                            <div class="col-xs-12">
-                                <p class="payment-errors"></p>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>            
-        </div>            
-    </div>
-</div>
-				
+				<div id="availability">
+					<form id="form" method="post" action="AnnulerVelo">
+						<div class="a-col"></div>
+					
+						<div class="a-col">
+							<div class="input-field">
+								<label for="codeReservation">Numéro de réservation</label>
+							</div>
+						</div>	
+						<div class="a-col">
+						<div class="input-field">
+								<input type="number" id="codeReservation" name="codeReservation" required/>
+							</div>
+						</div>
+						<div class="a-col"></div>									
+						<div class="a-col action">
+							<a onclick='document.getElementById("form").submit()'>
+								<span>Annuler</span>
+								la réservation
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
 			</div>
 		</div>
 	</div>

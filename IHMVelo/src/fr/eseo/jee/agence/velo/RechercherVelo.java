@@ -46,8 +46,14 @@ public class RechercherVelo extends HttpServlet {
 		velo.setCategorie(categorie);
 		velo.setVille(ville);
 		String dateDebut = request.getParameter("dateDebut");
-		dateDebut = dateDebut.substring(6) + '-'+ dateDebut.substring(0,2)+'-'+ dateDebut.substring(3,5);
 		String dateFin = request.getParameter("dateFin");
+		if (dateDebut.isEmpty() || dateFin.isEmpty()) {
+			boolean dateVide = true;
+			request.setAttribute("dateVide", dateVide);
+			RequestDispatcher dispat = request.getRequestDispatcher("index.jsp");
+			dispat.forward(request, response);
+		}
+		dateDebut = dateDebut.substring(6) + '-'+ dateDebut.substring(0,2)+'-'+ dateDebut.substring(3,5);
 		dateFin = dateFin.substring(6) + '-'+ dateFin.substring(0,2)+'-'+ dateFin.substring(3,5);
 		
 		// utiliser le sw pour convertir
