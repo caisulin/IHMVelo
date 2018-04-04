@@ -88,7 +88,7 @@
 					<h1 id="fh5co-logo"><a href="index.html">PARADISEBIKE</a></h1>
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="index.html">Accueil</a></li>
 							<li><a href="paiement.jsp">Paiement</a></li>
 							<li><a href="annulation.jsp">Annulation</a></li>
 						</ul>

@@ -1,9 +1,6 @@
 package fr.eseo.jee.agence.velo;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import fr.eseo.jee.agence.velo.sw2.LocationSEI;
 import fr.eseo.jee.agence.velo.sw2.LocationService;
 import fr.eseo.jee.agence.velo.sw2.Velo;
+
 
 
 
