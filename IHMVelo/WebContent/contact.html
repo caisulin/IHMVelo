@@ -1,8 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -85,12 +81,32 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html">PARADISEBIKE</a></h1>
+					<h1 id="fh5co-logo"><a href="index.html">Luxe</a></h1>
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li><a href="index.html">Accueil</a></li>
-							<li><a href="paiement.jsp">Paiement</a></li>
-							<li><a href="annulation.jsp">Annulation</a></li>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="hotel.html" class="fh5co-sub-ddown">Hotel</a>
+								<ul class="fh5co-sub-menu">
+								 	<li><a href="#">Luxe Hotel</a></li>
+								 	<li><a href="#">Deluxe Hotel</a></li>
+									<li>
+										<a href="#" class="fh5co-sub-ddown">King Hotel</a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" target="_blank">Build</a></li>
+											<li><a href="http://freehtml5.co/preview/?item=work-free-html5-template-bootstrap" target="_blank">Work</a></li>
+											<li><a href="http://freehtml5.co/preview/?item=light-free-html5-template-bootstrap" target="_blank">Light</a></li>
+											<li><a href="http://freehtml5.co/preview/?item=relic-free-html5-template-using-bootstrap" target="_blank">Relic</a></li>
+											<li><a href="http://freehtml5.co/preview/?item=display-free-html5-template-using-bootstrap" target="_blank">Display</a></li>
+											<li><a href="http://freehtml5.co/preview/?item=sprint-free-html5-template-bootstrap" target="_blank">Sprint</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Five Star Hotel</a></li> 
+								</ul>
+							</li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a class="active" href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -105,62 +121,54 @@
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
 					<div class="fh5co-intro fh5co-table-cell">
-						<h1 class="text-center">Choose Your Bike</h1>
+						<h1 class="text-center">Contact Us</h1>
+						<p>Made with love by the fine folks at <a href="http://freehtml5.co">FreeHTML5.co</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="fh5co-hotel-section">
-		<div class="container">
-			<div class="row">
-			
-				
-				<%@ page import="fr.eseo.jee.agence.velo.sw2.Velo,fr.eseo.jee.agence.velo.sw2.LocationSEI,
-				fr.eseo.jee.agence.velo.sw2.LocationService,java.util.List,java.util.Random" %>
-				<form  id="form" method="post" action="DemandeReservationVelo">
-				</form>
-				<% List<Velo> lesVelos = (List<Velo>) session.getAttribute("lesVelos");
-				
-				if (lesVelos.isEmpty()){ %>
-					<div class="alert alert-warning" role="alert">
-					Aucun vélo ne correspond à vos critères : 
-					<a href="index.html">Retour à l'accueil</a>
-					</div>
-					
-				<%}
-				
-				for (Velo vel: lesVelos){ 
-					Random r = new Random();
-					int valeur = 1 + r.nextInt(2);
-					String categorie = vel.getCategorie();
-					if (categorie.equals("vélo femme")) {
-						categorie = "Femme";
-					}
-					if (categorie.equals("vélo homme")) {
-						categorie = "Homme";
-					}
-					if (categorie.equals("vélo enfant")) {
-						categorie = "Enfant";
-					}
-				%>
-					<div class="col-md-4">
-						<div class="hotel-content">
-						
-							<div class="hotel-grid" style="background-image: url(images/velos/<%=categorie%><%= valeur%>.jpg);">
-								<div class="price"><small>Prix</small><span>€<%=vel.getPrixLocation() %></span></div>
-								<%session.setAttribute("idVelo", vel.getCodeVelo()) ; %>
-								<a class="book-now text-center" onclick='document.getElementById("form").submit()'>
-								<i class="ti-calendar"></i> Réserver</a>
+	<div id="fh5co-contact-section">
+		<div class="row">
+			<div class="col-md-6">
+				<div id="map" class="fh5co-map"></div>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-12">
+					<h3>Our Address</h3>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					<ul class="contact-info">
+						<li><i class="ti-map"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
+						<li><i class="ti-mobile"></i>+ 1235 2355 98</li>
+						<li><i class="ti-envelope"></i><a href="#">info@yoursite.com</a></li>
+						<li><i class="ti-home"></i><a href="#">www.yoursite.com</a></li>
+					</ul>
+				</div>
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Name">
 							</div>
-							<div class="desc">
-								<h3><a href="#">ID= <%=vel.getCodeVelo() %>  <%=vel.getCategorie() %></a></h3>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Email">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="submit" value="Send Message" class="btn btn-primary">
 							</div>
 						</div>
 					</div>
-				<% }%>
-				
+				</div>
 			</div>
 		</div>
 	</div>
@@ -189,7 +197,7 @@
 						<div class="col-md-3">
 							<h3>Our Facilities</h3>
 							<ul class="link">
-								<li><a href="#">Restaurant</a></li>
+								<li><a href="#">Resturant</a></li>
 								<li><a href="#">Bars</a></li>
 								<li><a href="#">Pick-up</a></li>
 								<li><a href="#">Swimming Pool</a></li>
@@ -251,6 +259,9 @@
 	<script src="js/selectFx.js"></script>
 	<!-- Flexslider -->
 	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="js/google_map.js"></script>
 
 	<script src="js/custom.js"></script>
 

@@ -10,14 +10,14 @@ import fr.eseo.jee.agence.client.Client;
 
 public class ClientBD {
 
-	private Statement stmt;
-	private Connection connect;
+	private static Statement stmt;
+	private static Connection connect;
 
-	public Statement connexion() {
+	public static Statement connexion() {
 		try {
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 			
-			connect = DriverManager.getConnection("jdbc:mysql://localhost/gestionClient?user=adminclient&password=network");
+			connect = DriverManager.getConnection("jdbc:mysql://localhost/gestionClient?user=adminclient&password=network&autoReconnect=true&useSSL=false");
 			
 			stmt = connect.createStatement();
 			
@@ -29,7 +29,7 @@ public class ClientBD {
 		}
 	}
 	
-	public void deconnexion() {
+	public static void deconnexion() {
 		try {
 			stmt.close();
 			connect.close();
@@ -38,7 +38,7 @@ public class ClientBD {
 		}
 	}
 	
-	public int ajoutClient(Client client) {
+	public static int ajoutClient(Client client) {
 		connexion();
 		int result = -1;
 		try {
@@ -57,7 +57,7 @@ public class ClientBD {
 		return result;
 	}
 	
-	public int getIdClient(String email) {
+	public static int getIdClient(String email) {
 		connexion();
 		int result = -1;
 		try {
