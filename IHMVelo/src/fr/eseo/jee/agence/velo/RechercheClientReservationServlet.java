@@ -36,6 +36,7 @@ public class RechercheClientReservationServlet extends HttpServlet {
 
 		HttpSession session = request.getSession();
 
+		
 		/*
 		 * Récupération du formulaire de l'adresse mail
 		 */

@@ -66,11 +66,16 @@
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
 	
+	<link rel="stylesheet" href="css/paiement.css">
+	
+	
 	<!-- Style -->
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/paiement.js"></script>
+	
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -90,7 +95,7 @@
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="paiement.jsp">Paiement</a></li>
-							<li><a href="annulation.jsp">Annulation</a></li>
+							<li><a class="active" href="annulation.jsp">Annulation</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -105,63 +110,36 @@
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
 					<div class="fh5co-intro fh5co-table-cell">
-						<h1 class="text-center">Choose Your Bike</h1>
+						<h1 class="text-center">Votre réservation n° <%=request.getSession().getAttribute("codeReservation") %> est effective.</h1>
+						<br>
+						<br>
+						<h3 style="color: white;">Vous pouvez dès à présent réaliser le paiement de celle-ci.</h3>
+						<br>
+						<h3 style="color: white;">N'oubliez pas votre numero de réservation pour pouvoir l'annuler et la payer.</h3>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="fh5co-hotel-section">
+	<div class="wrap">
 		<div class="container">
 			<div class="row">
-			
-				
-				<%@ page import="fr.eseo.jee.agence.velo.sw2.Velo,fr.eseo.jee.agence.velo.sw2.LocationSEI,
-				fr.eseo.jee.agence.velo.sw2.LocationService,java.util.List,java.util.Random" %>
-				<form  id="form" method="post" action="DemandeReservationVelo">
-				</form>
-				<% List<Velo> lesVelos = (List<Velo>) session.getAttribute("lesVelos");
-				
-				if (lesVelos.isEmpty()){ %>
-					<div class="alert alert-warning" role="alert">
-					Aucun vélo ne correspond à vos critères : 
-					<a href="index.html">Retour à l'accueil</a>
-					</div>
-					
-				<%}
-				
-				for (Velo vel: lesVelos){ 
-					Random r = new Random();
-					int valeur = 1 + r.nextInt(2);
-					String categorie = vel.getCategorie();
-					if (categorie.equals("vélo femme")) {
-						categorie = "Femme";
-					}
-					if (categorie.equals("vélo homme")) {
-						categorie = "Homme";
-					}
-					if (categorie.equals("vélo enfant")) {
-						categorie = "Enfant";
-					}
-				%>
-					<div class="col-md-4">
-						<div class="hotel-content">
+				<div id="availability">
+					<form id="form" method="post" action="index.html">
 						
-							<div class="hotel-grid" style="background-image: url(images/velos/<%=categorie%><%= valeur%>.jpg);">
-								<div class="price"><small>Prix</small><span>€<%=vel.getPrixLocation() %></span></div>
-								<%session.setAttribute("idVelo", vel.getCodeVelo()) ; %>
-								<input type="hidden" name=idVelo value=<%=vel.getCodeVelo() %>>
-								<a class="book-now text-center" onclick='document.getElementById("form").submit()'>
-								<i class="ti-calendar"></i> Réserver</a>
-							</div>
-							<div class="desc">
-								<h3><a href="#">ID= <%=vel.getCodeVelo() %>  <%=vel.getCategorie() %></a></h3>
-							</div>
+						<div class="a-col"></div>
+						<div class="a-col"></div>							
+						<div class="a-col action">
+							<a onclick='document.getElementById("form").submit()'>
+								<span>Retour</span>
+								à l'accueil
+							</a>
 						</div>
-					</div>
-				<% }%>
-				
+						<div class="a-col"></div>
+					</form>
+				</div>
+			</div>
 			</div>
 		</div>
 	</div>

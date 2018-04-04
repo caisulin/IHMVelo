@@ -34,12 +34,12 @@ public class ReserverVeloServlet extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		String dateDebut = (String) session.getAttribute("dateDebut");		
-		String dateFin = (String) session.getAttribute("dateFin");
+		String dateDebut = session.getAttribute("dateDebut").toString();		
+		String dateFin = session.getAttribute("dateFin").toString();
 		
-		String idVelo = (String) session.getAttribute("idVelo");
+		String idVelo = session.getAttribute("idVelo").toString();
 		
-		String idClient = (String) session.getAttribute("codeClient");
+		String idClient = session.getAttribute("codeClient").toString();
 		
 		/* on créer la reservation */
 		ReservationVelo reservation = new ReservationVelo();
@@ -62,12 +62,12 @@ public class ReserverVeloServlet extends HttpServlet {
 			// reservation ok
 			session.setAttribute("codeReservation", resultatRequete);
 
-			RequestDispatcher dispat = request.getRequestDispatcher("ReserverVelo");
+			RequestDispatcher dispat = request.getRequestDispatcher("idReservation.jsp");
 			dispat.forward(request, response);
 
 		} else {
 			// reservation fail 
-			RequestDispatcher dispat = request.getRequestDispatcher("creationCompteClient.jsp");
+			RequestDispatcher dispat = request.getRequestDispatcher("erreurReservation.jsp");
 			dispat.forward(request, response);
 		}
 	}

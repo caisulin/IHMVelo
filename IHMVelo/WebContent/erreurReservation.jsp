@@ -113,7 +113,7 @@
 						<h1 class="text-center">Un erreur est survenu pendant le création de la réservation</h1>
 						<br>
 						<br>
-						<h3>Veuillez contacter le service client</h3>
+						<h3 style="color: white;">Veuillez contacter le service client</h3>
 					</div>
 				</div>
 			</div>

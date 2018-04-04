@@ -41,8 +41,8 @@ public class DemandeReservationVelo extends HttpServlet {
 		HttpSession session = request.getSession();
 		Object dateDebut = session.getAttribute("dateDebut");		
 		Object dateFin = session.getAttribute("dateFin");
-		
-		Object idVelo = session.getAttribute("idVelo");
+				
+		System.out.println(session.getAttribute("idVelo"));
 		
 		RequestDispatcher dispat = request.getRequestDispatcher("DemandeMail.jsp");
 		dispat.forward(request, response);

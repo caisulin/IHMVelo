@@ -76,7 +76,7 @@ public class CreerClientServlet extends HttpServlet {
 		
 		ClientBD.deconnexion();
 
-		RequestDispatcher dispat = request.getRequestDispatcher("index.html");
+		RequestDispatcher dispat = request.getRequestDispatcher("ReserverVelo");
 		dispat.forward(request, response);
 	}
 
