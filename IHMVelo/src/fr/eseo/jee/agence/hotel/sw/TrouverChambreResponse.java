@@ -1,5 +1,5 @@
 
-package eseo.sw;
+package fr.eseo.jee.agence.hotel.sw;
 
 import java.util.ArrayList;
 import java.util.List;

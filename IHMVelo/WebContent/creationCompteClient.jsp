@@ -89,9 +89,23 @@
 							</h1>
 							<nav id="fh5co-menu-wrap" role="navigation">
 								<ul class="sf-menu" id="fh5co-primary-menu">
-									<li><a class="active" href="index.jsp">Home</a></li>
+									<li><a class="active" href="index.html">Accueil</a></li>
+									<li>
+								<a href="#" class="fh5co-sub-ddown">Nos +</a>
+								<ul class="fh5co-sub-menu">
+									<li>
+										<a href="indexHotel.html" class="fh5co-sub-ddown">Hotel</a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="indexHotel.html">Réserver</a></li>
+											<li><a href="paiementChambre.jsp">Payer</a></li>
+											<li><a href="annulationChambre.jsp">Annuler</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
 									<li><a href="listeVelo.html" class="fh5co-sub-ddown">Nos
 											vélos</a></li>
+										
 									<li><a href="contact.html">Contact</a></li>
 								</ul>
 							</nav>

@@ -4,7 +4,7 @@
  * This class is not complete
  */
 
-package eseo.sw;
+package fr.eseo.jee.agence.hotel.sw;
 
 import java.util.logging.Logger;
 import javax.jws.WebMethod;
@@ -66,7 +66,7 @@ public class GestionHotelsPortImpl implements GestionHotelsSEI {
     /* (non-Javadoc)
      * @see eseo.sw.GestionHotelsSEI#reserverChambre(eseo.sw.ReservationChambre arg0)*
      */
-    public int reserverChambre(eseo.sw.ReservationChambre arg0) { 
+    public int reserverChambre(fr.eseo.jee.agence.hotel.sw.ReservationChambre arg0) { 
         LOG.info("Executing operation reserverChambre");
         System.out.println(arg0);
         try {
@@ -81,12 +81,12 @@ public class GestionHotelsPortImpl implements GestionHotelsSEI {
     /* (non-Javadoc)
      * @see eseo.sw.GestionHotelsSEI#trouverChambre(eseo.sw.Chambre arg0)*
      */
-    public java.util.List<eseo.sw.Chambre> trouverChambre(eseo.sw.Chambre arg0) { 
+    public java.util.List<fr.eseo.jee.agence.hotel.sw.Chambre> trouverChambre(fr.eseo.jee.agence.hotel.sw.Chambre arg0) { 
         LOG.info("Executing operation trouverChambre");
         System.out.println(arg0);
         try {
-            java.util.List<eseo.sw.Chambre> _return = new java.util.ArrayList<eseo.sw.Chambre>();
-            eseo.sw.Chambre _returnVal1 = new eseo.sw.Chambre();
+            java.util.List<fr.eseo.jee.agence.hotel.sw.Chambre> _return = new java.util.ArrayList<fr.eseo.jee.agence.hotel.sw.Chambre>();
+            fr.eseo.jee.agence.hotel.sw.Chambre _returnVal1 = new fr.eseo.jee.agence.hotel.sw.Chambre();
             _returnVal1.setEtage(1595032624);
             _returnVal1.setIdChambre(1068329167);
             _returnVal1.setNbLits(770780719);

@@ -84,14 +84,14 @@
 					<h1 id="fh5co-logo"><a href="index.html">PARADISEBIKE</a></h1>
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li><a class="active" href="index.html">Accueil</a></li>
+							<li><a href="index.html">Accueil</a></li>
 							<li>
 								<a href="#" class="fh5co-sub-ddown">Nos +</a>
 								<ul class="fh5co-sub-menu">
 									<li>
 										<a href="indexHotel.html" class="fh5co-sub-ddown">Hotel</a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="indexHotel.html">R√©server</a></li>
+											<li><a href="indexHotel.html">RÈserver</a></li>
 											<li><a href="paiementChambre.jsp">Payer</a></li>
 											<li><a href="annulationChambre.jsp">Annuler</a></li>
 										</ul>
@@ -111,45 +111,21 @@
 	<aside id="fh5co-hero" class="js-fullheight">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
-		   	<li style="background-image:url(images/balade-a-velo-en-famille.jpg)">
+		   	<li style="background-image:url(images/hotel_feture_1.jpg)">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
 		   				<div class="slider-text-inner js-fullheight">
 		   					<div class="desc">
 		   						<p><span>Avec PARADISEBIKE </span></p>
-		   						<h2>Passez un moment de d√©tente en famille</h2>
+		   						<h2>Passez un moment de dÈtente en famille</h2>
 		   					</div>
 		   				</div>
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(images/vtt.jpg)">
-		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
-		   				<div class="slider-text-inner js-fullheight">
-		   					<div class="desc">
-		   						<p><span>Avec PARADISEBIKE</span></p>
-		   						<h2>Evadez-vous du stress quotidien</h2>
-		   					</div>
-		   				</div>
-		   			</div>
-		   		</div>
-		   	</li>
-		   	<li style="background-image:url(images/fixie-orange.jpg)">
-		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="col-md-12 col-md-offset-0 text-center slider-text">
-		   				<div class="slider-text-inner js-fullheight">
-		   					<div class="desc">
-		   						<p><span>Avec PARADISEBIKE</span></p>
-		   						<h2>Retrouvez des v√©los de qualit√©</h2>
-		   					</div>
-		   				</div>
-		   			</div>
-		   		</div>
-		   	</li>
+		   	
+		   	
 		   	
 		  	</ul>
 	  	</div>
@@ -158,15 +134,23 @@
 		<div class="container">
 			<div class="row">
 				<div id="availability">
+				
+				<% boolean dateVide = (boolean)request.getAttribute("dateVide");
+				if (dateVide == true) {%>
+					<div class="alert alert-danger" role="alert">
+					Veuillez saisir les dates !
+					</div>
+										
+				<%} %>
 					<form id="form" method="post" action="RechercherVelo">
 						<div class="a-col">
 							<section>
 								<select class="cs-select cs-skin-border" name="categorie">
-									<option value="" disabled selected>V√©lo</option>
+									<option value="" disabled selected>VÈlo</option>
 									<option value="VTT">VTT</option>
-									<option value="V√©lo femme">V√©lo femme</option>
-									<option value="V√©lo homme">V√©lo homme</option>
-									<option value="V√©lo enfant">V√©lo enfant</option>
+									<option value="VÈlo femme">VÈlo femme</option>
+									<option value="VÈlo homme">VÈlo homme</option>
+									<option value="VÈlo enfant">VÈlo enfant</option>
 									<option value="Fixie">Fixie</option>
 								</select>
 							</section>
@@ -183,20 +167,20 @@
 						</div>
 						<div class="a-col alternate">
 							<div class="input-field">
-								<label for="date-start">D√©but</label>
+								<label for="date-start">Check In</label>
 								<input type="text" class="form-control" id="date-start" name="dateDebut" required/>
 							</div>
 						</div>
 						<div class="a-col alternate">
 							<div class="input-field">
-								<label for="date-end">Fin</label>
+								<label for="date-end">Check Out</label>
 								<input type="text" class="form-control" id="date-end" name="dateFin" required/>
 							</div>
 						</div>
 						<div class="a-col action">
 							<a onclick='document.getElementById("form").submit()'>
-								<span>V√©rifier les</span>
-								disponibilit√©s
+								<span>Check</span>
+								Availability
 							</a>
 						</div>
 					</form>
@@ -206,26 +190,27 @@
 	</div>
 	
 	<div id="fh5co-counter-section" class="fh5co-counters">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 text-center">
-						<span class="fh5co-counter js-counter" data-from="0"
-							data-to="2356" data-speed="5000" data-refresh-interval="25"></span>
-						<span class="fh5co-counter-label">V√©los</span>
-					</div>
-					<div class="col-md-3 text-center">
-						<span class="fh5co-counter js-counter" data-from="0"
-							data-to="103" data-speed="2000" data-refresh-interval="2"></span>
-						<span class="fh5co-counter-label">Villes</span>
-					</div>
-					<div class="col-md-3 text-center">
-						<span class="fh5co-counter js-counter" data-from="0"
-							data-to="18763" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="fh5co-counter-label">Clients</span>
-					</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 text-center">
+					<span class="fh5co-counter js-counter" data-from="0" data-to="20356" data-speed="5000" data-refresh-interval="50"></span>
+					<span class="fh5co-counter-label">User Access</span>
+				</div>
+				<div class="col-md-3 text-center">
+					<span class="fh5co-counter js-counter" data-from="0" data-to="15501" data-speed="5000" data-refresh-interval="50"></span>
+					<span class="fh5co-counter-label">Hotels</span>
+				</div>
+				<div class="col-md-3 text-center">
+					<span class="fh5co-counter js-counter" data-from="0" data-to="8200" data-speed="5000" data-refresh-interval="50"></span>
+					<span class="fh5co-counter-label">Transactions</span>
+				</div>
+				<div class="col-md-3 text-center">
+					<span class="fh5co-counter js-counter" data-from="0" data-to="8763" data-speed="5000" data-refresh-interval="50"></span>
+					<span class="fh5co-counter-label">Rating &amp; Review</span>
 				</div>
 			</div>
 		</div>
+	</div>
 
 	<div id="featured-hotel" class="fh5co-bg-color">
 		<div class="container">

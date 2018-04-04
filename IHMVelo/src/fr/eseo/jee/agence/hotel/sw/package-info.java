@@ -1,2 +1,2 @@
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://sw.eseo/")
-package eseo.sw;
+package fr.eseo.jee.agence.hotel.sw;

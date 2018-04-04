@@ -93,9 +93,22 @@
 					<h1 id="fh5co-logo"><a href="index.html">PARADISEBIKE</a></h1>
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li><a href="index.html">Home</a></li>
+							<li><a class="active" href="index.html">Accueil</a></li>
+							<li>
+								<a href="#" class="fh5co-sub-ddown">Nos +</a>
+								<ul class="fh5co-sub-menu">
+									<li>
+										<a href="indexHotel.html" class="fh5co-sub-ddown">Hotel</a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="indexHotel.html">Réserver</a></li>
+											<li><a href="paiementChambre.jsp">Payer</a></li>
+											<li><a href="annulationChambre.jsp">Annuler</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
 							<li><a href="paiement.jsp">Paiement</a></li>
-							<li><a class="active" href="annulation.jsp">Annulation</a></li>
+							<li><a href="annulation.jsp">Annulation</a></li>
 						</ul>
 					</nav>
 				</div>

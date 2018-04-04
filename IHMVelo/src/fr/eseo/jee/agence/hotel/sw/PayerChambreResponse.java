@@ -1,5 +1,5 @@
 
-package eseo.sw;
+package fr.eseo.jee.agence.hotel.sw;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java pour reserverChambreResponse complex type.
+ * <p>Classe Java pour payerChambreResponse complex type.
  * 
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
- * &lt;complexType name="reserverChambreResponse"&gt;
+ * &lt;complexType name="payerChambreResponse"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -27,27 +27,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "reserverChambreResponse", propOrder = {
+@XmlType(name = "payerChambreResponse", propOrder = {
     "_return"
 })
-public class ReserverChambreResponse {
+public class PayerChambreResponse {
 
     @XmlElement(name = "return")
-    protected int _return;
+    protected String _return;
 
     /**
      * Obtient la valeur de la propriété return.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getReturn() {
+    public String getReturn() {
         return _return;
     }
 
     /**
      * Définit la valeur de la propriété return.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setReturn(int value) {
+    public void setReturn(String value) {
         this._return = value;
     }
 

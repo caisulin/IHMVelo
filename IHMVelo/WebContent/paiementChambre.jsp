@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -6,7 +10,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PARADISEBIKE</title>
+	<title>Luxe &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -62,11 +66,16 @@
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
 	
+	<link rel="stylesheet" href="css/paiement.css">
+	
+	
 	<!-- Style -->
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/paiement.js"></script>
+	
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -81,32 +90,25 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html">Luxe</a></h1>
+					<h1 id="fh5co-logo"><a href="index.html">PARADISEBIKE</a></h1>
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="index.html">Accueil</a></li>
 							<li>
-								<a href="hotel.html" class="fh5co-sub-ddown">Hotel</a>
+								<a href="#" class="fh5co-sub-ddown">Nos +</a>
 								<ul class="fh5co-sub-menu">
-								 	<li><a href="#">Luxe Hotel</a></li>
-								 	<li><a href="#">Deluxe Hotel</a></li>
 									<li>
-										<a href="#" class="fh5co-sub-ddown">King Hotel</a>
+										<a href="indexHotel.html" class="fh5co-sub-ddown">Hotel</a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" target="_blank">Build</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=work-free-html5-template-bootstrap" target="_blank">Work</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=light-free-html5-template-bootstrap" target="_blank">Light</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=relic-free-html5-template-using-bootstrap" target="_blank">Relic</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=display-free-html5-template-using-bootstrap" target="_blank">Display</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=sprint-free-html5-template-bootstrap" target="_blank">Sprint</a></li>
+											<li><a href="indexHotel.html">Réserver</a></li>
+											<li><a href="paiementChambre.jsp">Payer</a></li>
+											<li><a href="annulationChambre.jsp">Annuler</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Five Star Hotel</a></li> 
 								</ul>
 							</li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a class="active" href="contact.html">Contact</a></li>
+							<li><a href="paiement.jsp">Paiement</a></li>
+							<li><a href="annulation.jsp">Annulation</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -121,54 +123,106 @@
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
 					<div class="fh5co-intro fh5co-table-cell">
-						<h1 class="text-center">Contact Us</h1>
-						<p>Made with love by the fine folks at <a href="http://freehtml5.co">FreeHTML5.co</a></p>
+						<h1 class="text-center">It's time to pay !</h1>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="fh5co-contact-section">
-		<div class="row">
-			<div class="col-md-6">
-				<div id="map" class="fh5co-map"></div>
-			</div>
-			<div class="col-md-6">
-				<div class="col-md-12">
-					<h3>Our Address</h3>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					<ul class="contact-info">
-						<li><i class="ti-map"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
-						<li><i class="ti-mobile"></i>+ 1235 2355 98</li>
-						<li><i class="ti-envelope"></i><a href="#">info@yoursite.com</a></li>
-						<li><i class="ti-home"></i><a href="#">www.yoursite.com</a></li>
-					</ul>
-				</div>
-				<div class="col-md-12">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Name">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Email">
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="form-group">
-								<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="form-group">
-								<input type="submit" value="Send Message" class="btn btn-primary">
-							</div>
-						</div>
-					</div>
-				</div>
+	<div id="fh5co-hotel-section">
+		<div class="container">
+			<div class="row">
+				<div class="container">
+    <div class="row">
+        <!-- You can make it whatever width you want. I'm making it full width
+             on <= small devices and 4/12 page width on >= medium devices -->
+        <div class="col-lg-8 col-lg-offset-2">
+        
+                 <div class="panel panel-default credit-card-box">
+                <div class="panel-heading" >
+                    <div class="row display-tr" >
+                        <h3 class="panel-title display-td" >MODE DE PAIEMENT</h3>
+                        <div class="display-td" >                            
+                            <img class="img-responsive img-responsive col-lg-offset-4" src="images/logo_carte.png">
+                        </div>
+                    </div>                    
+                </div>
+                <div class="panel-body">
+                    <form role="form" id="payment-form" method="POST" action="PayerVelo">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="cardNumber">CARD NUMBER</label>
+                                    <div class="input-group">
+                                        <input 
+                                            type="tel"
+                                            class="form-control"
+                                            name="cardNumber"
+                                            placeholder="Valid Card Number"
+                                            autocomplete="cc-number"
+                                            required autofocus 
+                                            maxlength="16"
+                                        />
+                                        <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <div class="form-group">
+                                    <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                    <input 
+                                        type="tel" 
+                                        class="form-control" 
+                                        name="cardExpiry"
+                                        placeholder="MM / YY"
+                                        autocomplete="cc-exp"
+                                        required 
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="form-group">
+                                    <label for="cardCVC">CV CODE</label>
+                                    <input 
+                                        type="tel" 
+                                        class="form-control"
+                                        name="cardCVC"
+                                        placeholder="CVC"
+                                        autocomplete="cc-csc"
+                                        required
+                                        maxlength="3"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="codeReservation">NUMERO DE RESERVATION</label>
+                                    <input type="text" class="form-control" name="codeReservation" required/>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="subscribe btn btn-success btn-lg btn-block" type="button" onclick='document.getElementById("payment-form").submit()'>VALIDER LE PAIEMENT</button>
+                            </div>
+                        </div>
+                        <div class="row" style="display:none;">
+                            <div class="col-xs-12">
+                                <p class="payment-errors"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>            
+        </div>            
+    </div>
+</div>
+				
 			</div>
 		</div>
 	</div>
@@ -197,7 +251,7 @@
 						<div class="col-md-3">
 							<h3>Our Facilities</h3>
 							<ul class="link">
-								<li><a href="#">Resturant</a></li>
+								<li><a href="#">Restaurant</a></li>
 								<li><a href="#">Bars</a></li>
 								<li><a href="#">Pick-up</a></li>
 								<li><a href="#">Swimming Pool</a></li>
@@ -259,9 +313,6 @@
 	<script src="js/selectFx.js"></script>
 	<!-- Flexslider -->
 	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
 
 	<script src="js/custom.js"></script>
 

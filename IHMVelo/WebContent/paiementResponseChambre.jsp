@@ -10,7 +10,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PARADISEBIKE</title>
+	<title>Luxe &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -93,7 +93,7 @@
 					<h1 id="fh5co-logo"><a href="index.html">PARADISEBIKE</a></h1>
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li><a class="active" href="index.html">Accueil</a></li>
+							<li><a href="index.html">Accueil</a></li>
 							<li>
 								<a href="#" class="fh5co-sub-ddown">Nos +</a>
 								<ul class="fh5co-sub-menu">
@@ -123,36 +123,38 @@
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
 					<div class="fh5co-intro fh5co-table-cell">
-						<h1 class="text-center">Votre réservation n° <%=request.getSession().getAttribute("codeReservation") %> est effective.</h1>
-						<br>
-						<br>
-						<h3 style="color: white;">Vous pouvez dès à présent réaliser le paiement de celle-ci.</h3>
-						<br>
-						<h3 style="color: white;">N'oubliez pas votre numero de réservation pour pouvoir l'annuler et la payer.</h3>
+						<h1 class="text-center">It's time to pay !</h1>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="wrap">
+	<div id="fh5co-hotel-section">
 		<div class="container">
 			<div class="row">
-				<div id="availability">
-					<form id="form" method="post" action="index.html">
-						
-						<div class="a-col"></div>
-						<div class="a-col"></div>							
-						<div class="a-col action">
-							<a onclick='document.getElementById("form").submit()'>
-								<span>Retour</span>
-								à l'accueil
-							</a>
-						</div>
-						<div class="a-col"></div>
-					</form>
-				</div>
+				<div class="container">
+    <div class="row">
+        <% if (request.getAttribute("result").equals("OK")) { %>
+		<div class="container">
+			<div class="alert alert-success" role="alert">
+			Le paiement a bien été effectué.
 			</div>
+			<br>
+			<a href="index.html">Retour à l'accueil</a>
+			
+		</div>
+		<% } else { %>
+		<div class="container">
+			<div class="alert alert-danger" role="alert">
+			Erreur: veuillez vérifier votre numéro de réservation.
+			<a href="paiement.jsp">Retour à la page précédente</a>
+			</div>
+		</div>
+		<% } %>          
+    </div>
+</div>
+				
 			</div>
 		</div>
 	</div>

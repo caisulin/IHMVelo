@@ -1,5 +1,5 @@
 
-package eseo.sw;
+package fr.eseo.jee.agence.hotel.sw;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -7,16 +7,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java pour reserverChambre complex type.
+ * <p>Classe Java pour payerChambre complex type.
  * 
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
- * &lt;complexType name="reserverChambre"&gt;
+ * &lt;complexType name="payerChambre"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="arg0" type="{http://sw.eseo/}reservationChambre" minOccurs="0"/&gt;
+ *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -26,34 +26,26 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "reserverChambre", propOrder = {
+@XmlType(name = "payerChambre", propOrder = {
     "arg0"
 })
-public class ReserverChambre {
+public class PayerChambre {
 
-    protected ReservationChambre arg0;
+    protected int arg0;
 
     /**
      * Obtient la valeur de la propriété arg0.
      * 
-     * @return
-     *     possible object is
-     *     {@link ReservationChambre }
-     *     
      */
-    public ReservationChambre getArg0() {
+    public int getArg0() {
         return arg0;
     }
 
     /**
      * Définit la valeur de la propriété arg0.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link ReservationChambre }
-     *     
      */
-    public void setArg0(ReservationChambre value) {
+    public void setArg0(int value) {
         this.arg0 = value;
     }
 

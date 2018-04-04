@@ -1,4 +1,4 @@
-package eseo.sw;
+package fr.eseo.jee.agence.hotel.sw;
 
 import java.net.MalformedURLException;
 import java.net.URL;

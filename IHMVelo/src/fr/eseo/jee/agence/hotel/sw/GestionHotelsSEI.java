@@ -1,4 +1,4 @@
-package eseo.sw;
+package fr.eseo.jee.agence.hotel.sw;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -42,15 +42,15 @@ public interface GestionHotelsSEI {
     @WebResult(name = "return", targetNamespace = "")
     public int reserverChambre(
         @WebParam(name = "arg0", targetNamespace = "")
-        eseo.sw.ReservationChambre arg0
+        fr.eseo.jee.agence.hotel.sw.ReservationChambre arg0
     );
 
     @WebMethod
     @RequestWrapper(localName = "trouverChambre", targetNamespace = "http://sw.eseo/", className = "eseo.sw.TrouverChambre")
     @ResponseWrapper(localName = "trouverChambreResponse", targetNamespace = "http://sw.eseo/", className = "eseo.sw.TrouverChambreResponse")
     @WebResult(name = "return", targetNamespace = "")
-    public java.util.List<eseo.sw.Chambre> trouverChambre(
+    public java.util.List<fr.eseo.jee.agence.hotel.sw.Chambre> trouverChambre(
         @WebParam(name = "arg0", targetNamespace = "")
-        eseo.sw.Chambre arg0
+        fr.eseo.jee.agence.hotel.sw.Chambre arg0
     );
 }

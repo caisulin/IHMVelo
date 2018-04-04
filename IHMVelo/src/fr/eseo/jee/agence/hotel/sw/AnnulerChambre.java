@@ -1,5 +1,5 @@
 
-package eseo.sw;
+package fr.eseo.jee.agence.hotel.sw;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java pour payerChambre complex type.
+ * <p>Classe Java pour annulerChambre complex type.
  * 
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
- * &lt;complexType name="payerChambre"&gt;
+ * &lt;complexType name="annulerChambre"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
@@ -26,10 +26,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "payerChambre", propOrder = {
+@XmlType(name = "annulerChambre", propOrder = {
     "arg0"
 })
-public class PayerChambre {
+public class AnnulerChambre {
 
     protected int arg0;
 

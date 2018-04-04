@@ -1,5 +1,5 @@
 
-package eseo.sw;
+package fr.eseo.jee.agence.hotel.sw;
 
 /**
  * Please modify this class to meet your needs
@@ -67,7 +67,7 @@ public final class GestionHotelsSEI_GestionHotelsPort_Client {
         }
         {
         System.out.println("Invoking reserverChambre...");
-        eseo.sw.ReservationChambre _reserverChambre_arg0 = new eseo.sw.ReservationChambre();
+        fr.eseo.jee.agence.hotel.sw.ReservationChambre _reserverChambre_arg0 = new fr.eseo.jee.agence.hotel.sw.ReservationChambre();
         _reserverChambre_arg0.setDateDebut(javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar("2018-04-04T14:49:15.414+02:00"));
         _reserverChambre_arg0.setDateFin(javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar("2018-04-04T14:49:15.415+02:00"));
         _reserverChambre_arg0.setIdChambre(2015766250);
@@ -82,13 +82,13 @@ public final class GestionHotelsSEI_GestionHotelsPort_Client {
         }
         {
         System.out.println("Invoking trouverChambre...");
-        eseo.sw.Chambre _trouverChambre_arg0 = new eseo.sw.Chambre();
+        fr.eseo.jee.agence.hotel.sw.Chambre _trouverChambre_arg0 = new fr.eseo.jee.agence.hotel.sw.Chambre();
         _trouverChambre_arg0.setEtage(-2137662372);
         _trouverChambre_arg0.setIdChambre(1878880443);
         _trouverChambre_arg0.setNbLits(-1808344321);
         _trouverChambre_arg0.setPrix(-18950467);
         _trouverChambre_arg0.setTypeChambre("TypeChambre752783700");
-        java.util.List<eseo.sw.Chambre> _trouverChambre__return = port.trouverChambre(_trouverChambre_arg0);
+        java.util.List<fr.eseo.jee.agence.hotel.sw.Chambre> _trouverChambre__return = port.trouverChambre(_trouverChambre_arg0);
         System.out.println("trouverChambre.result=" + _trouverChambre__return);
 
 
